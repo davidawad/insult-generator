@@ -7,5 +7,14 @@ config = yaml.load(open(os.path.dirname(__file__) + 'settings.yaml'))
 
 pref = 'thou '
 
+# algorithm simply makes a random choice from three different columns and concatenates them. 
 
-random.choice(foo)
+col1 = random.choice(config['column1'])
+
+col2 = random.choice(config['column2'])
+
+col3 = random.choice(config['column3'])
+
+# print generated insult for the 'user' 
+print( pref + ' ' + col1 + ' ' + col2 + ' ' + col3 )
+
